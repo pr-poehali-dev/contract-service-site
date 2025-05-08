@@ -9,33 +9,33 @@ import Icon from "@/components/ui/icon";
 const ContractAdvantages = [
   {
     icon: "Banknote",
-    title: "Стабильное денежное довольствие",
-    description: "От 204 000 рублей в месяц плюс дополнительные выплаты и премии"
+    title: "Высокое денежное довольствие",
+    description: "От 204 000 рублей в месяц + премии за выполнение задач"
   },
   {
     icon: "Shield",
-    title: "Социальные гарантии",
-    description: "Полный социальный пакет, медицинское обслуживание и страхование"
+    title: "Полное обеспечение",
+    description: "Современное вооружение и экипировка, полное обеспечение"
   },
   {
     icon: "Home",
-    title: "Жилищное обеспечение",
-    description: "Возможность получения жилья или компенсация за наем жилого помещения"
-  },
-  {
-    icon: "GraduationCap",
-    title: "Образование и карьера",
-    description: "Бесплатное обучение и повышение квалификации, карьерный рост"
-  },
-  {
-    icon: "Heart",
-    title: "Забота о семье",
-    description: "Помощь семьям военнослужащих, льготы на образование для детей"
+    title: "Статус участника СВО",
+    description: "Льготы участникам СВО, жилищное обеспечение, компенсации"
   },
   {
     icon: "Trophy",
-    title: "Участие в защите Родины",
-    description: "Возможность внести свой вклад в обеспечение безопасности страны"
+    title: "Участие в СВО",
+    description: "Возможность внести вклад в защиту национальных интересов России"
+  },
+  {
+    icon: "Heart",
+    title: "Страхование жизни",
+    description: "Страховка и компенсации в случае ранения, полное медобслуживание"
+  },
+  {
+    icon: "FileText",
+    title: "Оформление за 3 дня",
+    description: "Быстрое оформление документов и отправка в учебный центр"
   }
 ];
 
@@ -64,7 +64,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center">
             <div className="flex items-center gap-3">
-              <span className="font-bold text-xl sm:text-2xl">КОНТРАКТНАЯ СЛУЖБА</span>
+              <span className="font-bold text-xl sm:text-2xl">КОНТРАКТ НА СВО</span>
             </div>
             <div className="hidden md:flex gap-6">
               <a href="#advantages" className="hover:text-blue-300 transition">Преимущества</a>
@@ -72,7 +72,7 @@ const Index = () => {
               <a href="#enlist" className="hover:text-blue-300 transition">Оставить заявку</a>
             </div>
             <Button variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-slate-900">
-              Горячая линия
+              8-800-100-77-07
             </Button>
           </div>
         </div>
@@ -83,21 +83,21 @@ const Index = () => {
         <div 
           className="absolute inset-0 opacity-40"
           style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1579912437766-7896df6d3cd3?auto=format&fit=crop&q=80')",
+            backgroundImage: "url('https://images.unsplash.com/photo-1565612711844-8d486c52ec71?auto=format&fit=crop&q=80')",
             backgroundSize: "cover",
             backgroundPosition: "center"
           }}
         ></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center text-white">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">Служба по контракту</h1>
-            <p className="text-xl mb-8">Стань частью профессиональной команды, защищающей интересы нашей Родины. Достойное вознаграждение, социальные гарантии и уверенность в завтрашнем дне.</p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">Служба по контракту в зоне СВО</h1>
+            <p className="text-xl mb-8">Стань частью единой команды, защищающей национальные интересы России. Высокое денежное довольствие, социальные гарантии, статус ветерана боевых действий.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="bg-red-600 hover:bg-red-700 text-white text-lg px-8">
-                <Icon name="Phone" className="mr-2" /> Позвонить нам
+                <Icon name="Phone" className="mr-2" /> Позвонить сейчас
               </Button>
               <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900 text-lg px-8">
-                <Icon name="FileText" className="mr-2" /> Узнать подробнее
+                <Icon name="FileText" className="mr-2" /> Оставить заявку
               </Button>
             </div>
           </div>
@@ -126,6 +126,63 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Информация о контракте */}
+      <section className="py-16 bg-blue-50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg border-2 border-blue-200">
+            <h2 className="text-3xl font-bold text-center mb-8">Условия контракта</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 className="text-xl font-semibold mb-4 flex items-center text-blue-700">
+                  <Icon name="Award" className="mr-2" /> Денежное довольствие
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <Icon name="Check" className="text-green-600 mr-2 mt-1 flex-shrink-0" />
+                    <span>От 204 000 рублей в месяц</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Icon name="Check" className="text-green-600 mr-2 mt-1 flex-shrink-0" />
+                    <span>Премия за выполнение боевых задач</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Icon name="Check" className="text-green-600 mr-2 mt-1 flex-shrink-0" />
+                    <span>Единовременная выплата 195 000 руб. при заключении контракта</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Icon name="Check" className="text-green-600 mr-2 mt-1 flex-shrink-0" />
+                    <span>Дополнительные выплаты за успешное выполнение задач</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-4 flex items-center text-blue-700">
+                  <Icon name="ShieldCheck" className="mr-2" /> Социальные гарантии
+                </h3>
+                <ul className="space-y-3">
+                  <li className="flex items-start">
+                    <Icon name="Check" className="text-green-600 mr-2 mt-1 flex-shrink-0" />
+                    <span>Статус ветерана боевых действий</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Icon name="Check" className="text-green-600 mr-2 mt-1 flex-shrink-0" />
+                    <span>Страхование жизни и здоровья</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Icon name="Check" className="text-green-600 mr-2 mt-1 flex-shrink-0" />
+                    <span>Полное медицинское обеспечение</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Icon name="Check" className="text-green-600 mr-2 mt-1 flex-shrink-0" />
+                    <span>Льготы по ипотеке, образованию и пенсии</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Требования */}
       <section id="requirements" className="py-16 bg-slate-100">
         <div className="container mx-auto px-4">
@@ -139,15 +196,7 @@ const Index = () => {
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <Icon name="ChevronRight" className="text-blue-600 mr-2 mt-1 flex-shrink-0" />
-                    <span>Гражданин Российской Федерации</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Icon name="ChevronRight" className="text-blue-600 mr-2 mt-1 flex-shrink-0" />
-                    <span>Возраст от 18 до 60 лет</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Icon name="ChevronRight" className="text-blue-600 mr-2 mt-1 flex-shrink-0" />
-                    <span>Образование не ниже основного общего (9 классов)</span>
+                    <span>Гражданин РФ в возрасте от 18 до 60 лет</span>
                   </li>
                   <li className="flex items-start">
                     <Icon name="ChevronRight" className="text-blue-600 mr-2 mt-1 flex-shrink-0" />
@@ -155,7 +204,11 @@ const Index = () => {
                   </li>
                   <li className="flex items-start">
                     <Icon name="ChevronRight" className="text-blue-600 mr-2 mt-1 flex-shrink-0" />
-                    <span>Физически подготовлены</span>
+                    <span>Образование не ниже основного общего (9 классов)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <Icon name="ChevronRight" className="text-blue-600 mr-2 mt-1 flex-shrink-0" />
+                    <span>Отсутствие судимости</span>
                   </li>
                 </ul>
               </div>
@@ -170,19 +223,15 @@ const Index = () => {
                   </li>
                   <li className="flex items-start">
                     <Icon name="FileCheck" className="text-blue-600 mr-2 mt-1 flex-shrink-0" />
-                    <span>Военный билет или приписное свидетельство</span>
+                    <span>Военный билет</span>
                   </li>
                   <li className="flex items-start">
                     <Icon name="FileCheck" className="text-blue-600 mr-2 mt-1 flex-shrink-0" />
-                    <span>Документы об образовании</span>
+                    <span>СНИЛС и ИНН</span>
                   </li>
                   <li className="flex items-start">
                     <Icon name="FileCheck" className="text-blue-600 mr-2 mt-1 flex-shrink-0" />
-                    <span>Медицинское заключение (при наличии)</span>
-                  </li>
-                  <li className="flex items-start">
-                    <Icon name="FileCheck" className="text-blue-600 mr-2 mt-1 flex-shrink-0" />
-                    <span>Фотографии 3x4 (4 шт.)</span>
+                    <span>Реквизиты банковской карты МИР</span>
                   </li>
                 </ul>
               </div>
@@ -221,8 +270,12 @@ const Index = () => {
                     </div>
                   </div>
                   <div className="space-y-2">
+                    <label htmlFor="experience" className="block text-sm font-medium">Военный опыт</label>
+                    <Input id="experience" placeholder="Напишите вашу военную специальность (если есть)" />
+                  </div>
+                  <div className="space-y-2">
                     <label htmlFor="message" className="block text-sm font-medium">Дополнительная информация</label>
-                    <Textarea id="message" placeholder="Опыт службы, имеющиеся навыки, вопросы" rows={4} />
+                    <Textarea id="message" placeholder="Опыт службы, имеющиеся навыки, вопросы" rows={3} />
                   </div>
                   <div className="text-sm text-slate-500">
                     Нажимая кнопку "Отправить", вы даете согласие на обработку персональных данных
@@ -237,27 +290,42 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Дополнительная информация */}
+      {/* Информация о пунктах отбора */}
       <section className="py-12 bg-slate-100">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-2xl font-bold mb-6">Дополнительная информация</h2>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-center mb-8">Пункты отбора на военную службу по контракту</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white p-6 rounded-lg shadow">
-                <Icon name="MapPin" className="h-10 w-10 mx-auto mb-4 text-red-600" />
-                <h3 className="text-lg font-semibold mb-2">Пункты отбора</h3>
-                <p>Пункты отбора на военную службу по контракту работают во всех субъектах РФ</p>
+              <div className="bg-white p-6 rounded-lg shadow text-center">
+                <div className="flex justify-center mb-4">
+                  <Icon name="MapPin" className="h-10 w-10 text-red-600" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Москва и область</h3>
+                <p className="text-slate-500">г. Москва, ул. Угрешская, дом 8</p>
+                <p className="font-medium mt-2">8 (495) 123-45-67</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow">
-                <Icon name="Clock" className="h-10 w-10 mx-auto mb-4 text-blue-600" />
-                <h3 className="text-lg font-semibold mb-2">Сроки рассмотрения</h3>
-                <p>Заявки рассматриваются в кратчайшие сроки, процесс оформления занимает минимум времени</p>
+              <div className="bg-white p-6 rounded-lg shadow text-center">
+                <div className="flex justify-center mb-4">
+                  <Icon name="MapPin" className="h-10 w-10 text-red-600" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Санкт-Петербург</h3>
+                <p className="text-slate-500">г. Санкт-Петербург, наб. реки Фонтанки, 90</p>
+                <p className="font-medium mt-2">8 (812) 123-45-67</p>
               </div>
-              <div className="bg-white p-6 rounded-lg shadow">
-                <Icon name="HelpCircle" className="h-10 w-10 mx-auto mb-4 text-green-600" />
-                <h3 className="text-lg font-semibold mb-2">Консультации</h3>
-                <p>Опытные специалисты ответят на все ваши вопросы о прохождении службы по контракту</p>
+              <div className="bg-white p-6 rounded-lg shadow text-center">
+                <div className="flex justify-center mb-4">
+                  <Icon name="PhoneCall" className="h-10 w-10 text-green-600" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Единая горячая линия</h3>
+                <p className="text-slate-500">Круглосуточно, без выходных</p>
+                <p className="font-medium mt-2">8-800-100-77-07</p>
               </div>
+            </div>
+            <div className="mt-8 text-center">
+              <p className="mb-4">Пункты отбора на военную службу по контракту работают во всех субъектах РФ</p>
+              <Button className="bg-blue-600 hover:bg-blue-700">
+                <Icon name="Search" className="mr-2" /> Найти ближайший пункт отбора
+              </Button>
             </div>
           </div>
         </div>
@@ -268,17 +336,16 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <p className="font-bold text-xl">КОНТРАКТНАЯ СЛУЖБА</p>
-              <p className="text-sm text-slate-400 mt-1">© {new Date().getFullYear()} Все права защищены</p>
+              <p className="font-bold text-xl">СЛУЖБА ПО КОНТРАКТУ В СВО</p>
+              <p className="text-sm text-slate-400 mt-1">© {new Date().getFullYear()} Министерство обороны Российской Федерации</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 items-center">
-              <div className="flex items-center gap-2">
-                <Icon name="Phone" className="text-white" />
-                <span>8 (800) 123-45-67</span>
-              </div>
+              <Button variant="outline" className="border-white text-white hover:bg-white hover:text-slate-900">
+                <Icon name="Phone" className="mr-2" /> 8-800-100-77-07
+              </Button>
               <div className="flex items-center gap-2">
                 <Icon name="Mail" className="text-white" />
-                <span>info@contract-service.ru</span>
+                <span>contract@mil.ru</span>
               </div>
             </div>
           </div>
